@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Test</title>
+<style>
+    /* Estilos CSS */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #test-form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .question label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .question input[type="radio"] {
+        margin-right: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #submit-btn {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #submit-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<form id="test-form">
+    <div class="question">
+        <label>¿Es familiar? </label>
+        <input type="radio" name="esFamiliar" value="Si"> Sí
+        <input type="radio" name="esFamiliar" value="No"> No
+    </div>
+    <div class="question">
+        <label>Actividad: </label>
+        <input type="text" name="actividad" placeholder="Escribe la actividad">
+    </div>
+    <div class="question">
+        <label>Restricción alimentaria: </label>
+        <input type="text" name="restriccionAlimentaria" placeholder="Escribe la restricción alimentaria">
+    </div>
+    <div class="question">
+        <label>¿Utiliza silla de ruedas? </label>
+        <input type="radio" name="sillaRuedas" value="Si"> Sí
+        <input type="radio" name="sillaRuedas" value="No"> No
+    </div>
+    <div class="question">
+        <label>¿Tiene problemas visuales? </label>
+        <input type="radio" name="visual" value="Si"> Sí
+        <input type="radio" name="visual" value="No"> No
+    </div>
+    <div class="question">
+        <label>¿Tiene problemas auditivos? </label>
+        <input type="radio" name="auditiva" value="Si"> Sí
+        <input type="radio" name="auditiva" value="No"> No
+    </div>
+    <button id="submit-btn" type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

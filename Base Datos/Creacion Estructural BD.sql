@@ -1,12 +1,21 @@
 CREATE SCHEMA `HackMexico`;
 
-DROP SCHEMA `hackmexico` ;
-
 USE HackMexico;
+
+CREATE TABLE Logins 
+(
+	UserName VARCHAR(30) NOT NULL,
+    Contrasena VARCHAR(50) NOT NULL,
+    CONSTRAINT Logins PRIMARY KEY
+    (
+		UserName
+    )
+);
 
 CREATE TABLE Usuarios
 (
 	ID_Usuario INT NOT NULL AUTO_INCREMENT,
+    UserName_FK VARCHAR(30) NOT NULL,
     Primer_Nombre VARCHAR(30) NOT NULL,
     Segundo_Nombre VARCHAR(30) NULL,
     Primer_Apellido VARCHAR(30) NOT NULL,
@@ -25,6 +34,8 @@ CREATE TABLE Usuarios
 		ID_Usuario
     )
 );
+
+ALTER TABLE Usuarios ADD CONSTRAINT UserName_FK FOREIGN KEY (UserName_FK) REFERENCES Logins(UserName);
 
 CREATE TABLE Tests
 (
@@ -99,3 +110,16 @@ CREATE TABLE Destinos
 ALTER TABLE Destinos ADD CONSTRAINT ID_Usuario_FK FOREIGN KEY(ID_Usuario_FK) REFERENCES Usuarios(ID_Usuario);
 ALTER TABLE Destinos ADD CONSTRAINT ID_Lugar_FK FOREIGN KEY(ID_Lugar_FK) REFERENCES Lugares(ID_Lugar);
 ALTER TABLE Destinos ADD CONSTRAINT ID_Test_FK FOREIGN KEY(ID_Test_FK) REFERENCES Tests(ID_Test);
+
+CREATE TABLE Comentarios
+(
+	ID_Comentario INT NOT NULL AUTO_INCREMENT,
+    ID_Lugar_FK INT NOT NULL,
+    Comentario VARCHAR(1000) NOT NULL,
+    CONSTRAINT Comentarios PRIMARY KEY
+    (
+		ID_Comentario
+    )
+);
+
+ALTER TABLE Comentarios ADD CONSTRAINT ID_Lugar_Comentario_FK FOREIGN KEY(ID_Lugar_FK) REFERENCES Lugares(ID_Lugar);

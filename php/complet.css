@@ -1,0 +1,14 @@
+.grupo {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grupo input {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.grupo input:last-child {
+    margin-right: 0;
+}

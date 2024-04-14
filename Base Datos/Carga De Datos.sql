@@ -49,7 +49,10 @@ INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Ed
 VALUES ('Turismo', 'Exploración y disfrute de destinos turísticos, culturales, naturales o históricos, con el propósito de conocer nuevas culturas, experiencias y lugares, así como relajarse y recrearse fuera del entorno habitual.', 20000, 'De 1 hora a 7 días.', 4);
 
 INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
-VALUES ('', '', , '', );
+VALUES ('Teatro', 'Representación en vivo de obras dramáticas o artísticas, donde actores interpretan roles y narrativas para entretener, educar o transmitir mensajes emocionales, sociales o culturales a una audiencia en un escenario.', 1000, 'DE 1 hora a 3 horas.', 12);
+
+
+
 
 
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
@@ -182,17 +185,22 @@ INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre
 VALUES ('Mahahual', 'Un pueblo pesquero que se encuentra en la costa del Caribe y que es conocido por sus playas de arena blanca.', '08:00', '22:00', 'Todos los días', 'Mahahual', 0, 'Mahahual', 'Othón P. Blanco', 77750, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, hoteles', 'No', 'Sí');
 
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('Palacio de Gobierno ', 'Un palacio que alberga las oficinas del gobernador del estado de Yucatán.', '08:00', '15:00', 'Lunes a viernes', 'Plaza Grande ', 0, 
-'', '', , '', '', '', '', '', '');
+VALUES ('Palacio de Gobierno ', 'Un palacio que alberga las oficinas del gobernador del estado de Yucatán.', '08:00', '15:00', 'Lunes a viernes', 'Plaza Grande ', 0, 'Centro', 'Mérida', 97000, 'Yucatán', 'Recorrido', 'No', 'Tienda de regalos, visitas guiadas', 'No', 'Sí');
+
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
+VALUES ('Teatro Peón Contreras', 'Un teatro que es uno de los más importantes de México.', '10:00', '18:00', 'Martes a domingo', 'Calle 60', 52, 'Centro', 'Mérida', 97000, 'Yucatán', 'Teatro', 'Sí', 'Tienda de regalos, cafetería, visitas', 'No', 'Sí');
+
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
-select * from Lugares;
-Colonia Centro,Mérida,97000,Yucatán,Monumento histórico,Sí,Tienda de regalos, visitas guiadas,Sí,Sí
-45,Teatro Peón Contreras,Un teatro que es uno de los más importantes de México.,10:00 a 18:00 hrs.,Martes a domingo,Calle 60 No. 52-A,Colonia Centro,Mérida,97000,Yucatán,Teatro,Sí,Tienda de regalos, cafetería, visitas guiadas,Sí,Sí
-46,Museo Regional de Antropología de Yucatán,Un museo que alberga una colección de artefactos de la cultura maya.,8:00 a 17:00 hrs.,Martes a domingo,Calle 60 No. 52-A,Colonia Centro,Mérida,97000,Yucatán,Museo,Sí,Tienda de regalos, cafetería, visitas guiadas,Sí,Sí
-47,Mercado Lucas de Gálvez,Un mercado que ofrece una gran variedad de productos locales.,8:00 a 20:00 hrs.,Todos los días,Calle 57 No. 505,Colonia Centro,Mérida,97000,Yucatán,Mercado,Sí,Tiendas de artesanías, restaurantes, estacionamiento,Sí,Sí
-48,Paseo de Montejo,Un paseo que es uno de los más emblemáticos de la ciudad de Mérida.,6:00 a 22:00 hrs.,Todos los días,Paseo de Montejo,Mérida,97000,Yucatán,Paseo,Sí,Áreas verdes, monumentos, restaurantes,Sí,Sí
-49,Cenote Suytun,Un cenote natural de aguas cristalinas donde se puede nadar y bucear.,8:00 a 17:00 hrs.,Todos los días,Valladolid,Valladolid,98500,Yucatán,Cenote,Sí,Tienda de regalos, restaurante, estacionamiento,Sí,No
-50,Uxmal,Una antigua ciudad maya que es Patrimonio de la Humanidad por la UNESCO.,8:00 a 17:00 hrs.,Todos los días,Uxmal,Uxmal,97870,Yucatán,Zona arqueológica,Sí,Tienda de regalos, restaurante, estacionamiento,Sí,Sí
+VALUES ('Museo Regional de Antropología', 'Un museo que alberga una colección de artefactos de la cultura maya.', '08:00', '17:00', 'artes a domingo', 'Calle 60', 52, 'Centro', 'Mérida', 97000, 'Yucatán', 'Museo', 'Sí', 'Tienda de regalos, cafetería, visitas guiadas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Mercado Lucas de Gálvez', 'Un mercado que ofrece una gran variedad de productos locales', '08:00', '20:00', 'Todos los días', 'Calle 57', 505, 'Centro', 'Mérida', 97000, 'Yucatán', 'Mercado', 'Sí', 'Tiendas de artesanías, restaurantes, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Paseo de Montejo', 'Un paseo que es uno de los más emblemáticos de la ciudad de Mérida.', '06:00', '22:00', 'Todos los días', 'Paseo de Montejo', 0, 'Montejo', 'Mérida', 97000, 'Yucatán', 'Naturaleza', 'Sí', 'Áreas verdes, monumentos, restaurantes', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Cenote Suytun', 'Un cenote natural de aguas cristalinas donde se puede nadar y bucear', '08:00', '17:00', 'Todos los días', 'Valladolid', 0, 'Valladolid', 'Yucatán', 98500, 'Yucatán', 'NAturaleza', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Uxmal', 'Una antigua ciudad maya que es Patrimonio de la Humanidad por la UNESCO.', '08:00', '17:00', 'Todos los días', 'Av. Principal', 0, 'Uxmal', 'Yucatán', 97870, 'Yucatán', 'Arqueológia', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'Sí', 'Sí');

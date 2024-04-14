@@ -1,15 +1,14 @@
 <?php
 include 'conexion.php';  //incluye el archivo de conexion
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$usario = $_POST['usuario'];
+
+$username= $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 
 
-$query = "INSERT INTO usuariosSI(nombre,correo,usuario,contrasena) 
-    VALUES('$nombre','$correo','$usario','$contrasena')";
+$query = "INSERT INTO logins(usuario,contrasena) 
+    VALUES('$username','$contrasena')";
     //Verificar que el correo no se repita
-    $verificar_correo = mysqli_query($conexion,"SELECT * FROM usuariosSI WHERE correo='$correo'");
+    $verificar_correo = mysqli_query($conexion,"SELECT * FROM logins WHERE correo='$correo'");
     if(mysqli_num_rows($verificar_correo) > 0){
         echo '
         <script>   
@@ -20,7 +19,7 @@ $query = "INSERT INTO usuariosSI(nombre,correo,usuario,contrasena)
         exit();
     }
     //Verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM usuariosSI WHERE usuario='$usario'");  
+    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM logins WHERE usuario='$username'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
         echo '
         <script>   
@@ -38,6 +37,7 @@ if($ejecutar){
     echo '
     <script>   
     alert("Usuario almacenado exitosamente");
+    window.location = "complet.html";
     </script>
     ';
 }
