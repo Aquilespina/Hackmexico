@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Destino</title>
+    <link rel="stylesheet" href="destinos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registrar Destino</h1>
+      <form action="guardar_destino.php" method="POST" class="destino-form">
+        <label for="id_usuario">ID de Usuario:</label>
+        <input type="text" id="id_usuario" name="id_usuario" required /><br />
+
+        <label for="id_lugar">ID de Lugar:</label>
+        <input type="text" id="id_lugar" name="id_lugar" required /><br />
+
+        <label for="id_test">ID de Test:</label>
+        <input type="text" id="id_test" name="id_test" required /><br />
+
+        <label for="numero_personas">Número de Personas:</label>
+        <input
+          type="number"
+          id="numero_personas"
+          name="numero_personas"
+          required
+        /><br />
+
+        <label for="costo_total">Costo Total:</label>
+        <input
+          type="number"
+          id="costo_total"
+          name="costo_total"
+          required
+          step="0.01"
+        /><br />
+
+        <button type="submit">Guardar Destino</button>
+      </form>
+    </div>
+  </body>
+</html>
