@@ -45,10 +45,9 @@ CREATE TABLE Tests
 CREATE TABLE Tipo_Actividades
 (
 	Nombre_Actividad VARCHAR(30) NOT NULL,
-    Descripcion VARCHAR(80) NOT NULL,
+    Descripcion VARCHAR(500) NOT NULL,
     Costo FLOAT NULL,
     Duracion VARCHAR(30) NOT NULL,
-    Disponibilidad VARCHAR(30) NOT NULL,
     Edad_Minima INT NOT NULL,
     CONSTRAINT Tipo_Actividad PRIMARY KEY
     (
@@ -60,7 +59,7 @@ CREATE TABLE Lugares
 (
 	ID_Lugar INT NOT NULL AUTO_INCREMENT,
     Nombre_Lugar VARCHAR(30) NOT NULL,
-    Descripcion VARCHAR(30) NOT NULL,
+    Descripcion VARCHAR(500) NOT NULL,
     Horario_Apertura TIME NOT NULL,
     Horario_Cierre TIME NOT NULL,
     Dias_Abiertos VARCHAR(30) NOT NULL,
@@ -71,7 +70,7 @@ CREATE TABLE Lugares
     Codigo_Postal VARCHAR(5) NOT NULL,
     Estado VARCHAR(30) NOT NULL,
     Tipo_Actividad_FK VARCHAR(30) NOT NULL,
-    Servicios_Disponibles VARCHAR(30) NOT NULL,
+    Servicios_Disponibles VARCHAR(200) NOT NULL,
 	Silla_Ruedas VARCHAR(2) NOT NULL,
     Visual VARCHAR(2) NOT NULL,
     Auditiva VARCHAR(2) NOT NULL,
