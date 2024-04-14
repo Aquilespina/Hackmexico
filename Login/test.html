@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Test</title>
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="guardar_test.php" method="POST" class="test-form">
+          <h2>Registro de Test</h2>
+          <textarea
+            name="id_usuario"
+            id="id_usuario"
+            rows="4"
+            required
+          ></textarea>
+          <label for="es_familiar">¿Es familiar?</label>
+          <select name="es_familiar" id="es_familiar" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+          <label for="actividad">Actividad</label>
+          <textarea
+            name="actividad"
+            id="actividad"
+            rows="4"
+            required
+          ></textarea>
+          <label for="restriccion_alimentaria">Restricción Alimentaria</label>
+          <textarea
+            name="restriccion_alimentaria"
+            id="restriccion_alimentaria"
+            rows="4"
+            required
+          ></textarea>
+          <label for="silla_ruedas">¿Usa silla de ruedas?</label>
+          <select name="silla_ruedas" id="silla_ruedas" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+          <label for="visual">¿Problemas visuales?</label>
+          <select name="visual" id="visual" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+          <label for="auditiva">¿Problemas auditivos?</label>
+          <select name="auditiva" id="auditiva" required>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select>
+          <button type="submit">Guardar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
