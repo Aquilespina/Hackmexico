@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="regis.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Usuario</title>
+    <link rel="shortcut icon" href="img/lpd.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="registrate.css" />
+  </head>
+  <body>
     <main>
-        <div class="contenedor__formulario">
-            <form action="../php/registro.php" method="POST" class="formulario__register">
-                <h2>Registrarse</h2>
-                <div class="grupo">
-                  
-                    <input type="text" placeholder="Usuario" name="UserName">
-                    <input type="password" placeholder="Contraseña" name="contrasena">
-               
-                <button type="submit">Registrarse</button>
-            </form>
-        </div>
+      <div class="container">
+        <form action="registrar.php" method="POST" class="register-form">
+          <h2>Registro de Usuario</h2>
+          <input
+            type="text"
+            placeholder="Nombre de usuario"
+            name="username"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            name="password"
+            required
+          />
+          <button type="submit">Registrarse</button>
+        </form>
+      </div>
     </main>
-</body>
+  </body>
 </html>
