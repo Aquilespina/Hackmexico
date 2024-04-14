@@ -10,7 +10,7 @@ $query = "INSERT INTO Logins(UserName,contrasena)
    
   
     //Verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE UserName='$UserName'");  
+    /*$verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE UserName='$UserName'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
         echo '
         <script>   
@@ -19,7 +19,7 @@ $query = "INSERT INTO Logins(UserName,contrasena)
         </script>
         ';
         exit();
-    }   
+    }   */
 
 
     
