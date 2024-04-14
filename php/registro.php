@@ -1,25 +1,16 @@
 <?php
 include 'conexion.php';  //incluye el archivo de conexion
 
-$username= $_POST['usuario'];
+$username= $_POST['username'];
 $contrasena = $_POST['contrasena'];
 
 
-$query = "INSERT INTO logins(usuario,contrasena) 
+$query = "INSERT INTO Logins(usuario,contrasena) 
     VALUES('$username','$contrasena')";
-    //Verificar que el correo no se repita
-    $verificar_correo = mysqli_query($conexion,"SELECT * FROM logins WHERE correo='$correo'");
-    if(mysqli_num_rows($verificar_correo) > 0){
-        echo '
-        <script>   
-        alert("Este correo ya esta registrado, intenta con otro diferente");
-        window.location = "../index.php";
-        </script>           
-        ';
-        exit();
-    }
+   
+  
     //Verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM logins WHERE usuario='$username'");  
+    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE username='$username'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
         echo '
         <script>   
