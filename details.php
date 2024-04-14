@@ -68,11 +68,11 @@ $nombre_lugar = $_GET['nombre_lugar'];
     <div class="container">
         <div class="info">
             <?php
-            
-            $nombre_lugar = mysqli_real_escape_string($conn, $nombre_lugar); // Escapar el valor de $nombre_lugar
 
-            $sql = "SELECT Nombre_Lugar, Descripcion, CONCAT(Calle, ' ', Numero_Exterior, ' ', Colonia, ' ', Municipio, ' ', Codigo_Postal, ' ', Estado) as Direccion, Horario_Apertura, Horario_Cierre, Dias_Abiertos, Tipo_Actividad_FK, Servicios_Disponibles, Silla_Ruedas, Visual, Auditiva FROM Lugares WHERE Nombre_Lugar='{$nombre_lugar}'";
+            $nombre_lugar = mysqli_real_escape_string($conn, $nombre_lugar); // Escapar el valor de $nombre_lugar
             
+            $sql = "SELECT Nombre_Lugar, Descripcion, CONCAT(Calle, ' ', Numero_Exterior, ' ', Colonia, ' ', Municipio, ' ', Codigo_Postal, ' ', Estado) as Direccion, Horario_Apertura, Horario_Cierre, Dias_Abiertos, Tipo_Actividad_FK, Servicios_Disponibles, Silla_Ruedas, Visual, Auditiva FROM Lugares WHERE Nombre_Lugar='{$nombre_lugar}'";
+
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             $imageName = "img/" . $row['Nombre_Lugar'] . "." . "jpg";
@@ -94,18 +94,33 @@ $nombre_lugar = $_GET['nombre_lugar'];
         </div>
         <div class="reviews">
             <h2>Reseñas</h2>
-            <div class="review">
-                <p><strong>Calificación:</strong> 5 estrellas</p>
-                <p><strong>Comentario:</strong> Excelente lugar, lo recomiendo totalmente.</p>
-                <p><strong>Autor:</strong> Juan Pérez</p>
-                <p><strong>Fecha:</strong> 12 de Abril, 2024</p>
-            </div>
-            <div class="review">
-                <p><strong>Calificación:</strong> 4 estrellas</p>
-                <p><strong>Comentario:</strong> Buen lugar, pero podría mejorar en algunos aspectos.</p>
-                <p><strong>Autor:</strong> María González</p>
-                <p><strong>Fecha:</strong> 10 de Abril, 2024</p>
-            </div>
+            <?php
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            // Select all data from the 'users' table
+            $sql = "SELECT comentarios.Comentario FROM comentarios JOIN Lugares ON comentarios.ID_Lugar_FK = Lugares.ID_Lugar WHERE Lugares.Nombre_Lugar = '{$nombre_lugar}'";
+
+            $result = mysqli_query($conn, $sql);
+            $imageName;
+
+            // Check query results
+            if (mysqli_num_rows($result) > 0) {
+                // Print each row
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='review'>";
+                    echo "<p><strong>Comentario: </strong>{$row['Comentario']}</p>";
+                    echo " </div>";
+                }
+            } else {
+                echo "Sin reseñas aún";
+            }
+
+            // Close connection
+            mysqli_close($conn);
+            ?>
             <!-- Agrega más reseñas aquí si es necesario -->
         </div>
     </div>
