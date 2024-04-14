@@ -24,8 +24,50 @@ $nombre_lugar = $_GET['nombre_lugar'];
             --color-6: #83A4EB;
             --color-7: #D1DADD;
 
-            background: rgb(12, 104, 148);
-            background: linear-gradient(90deg, rgba(12, 104, 148, 1) 3%, rgba(20, 87, 121, 1) 16%, rgba(111, 203, 202, 1) 44%, rgba(111, 202, 202, 1) 66%, rgba(99, 176, 194, 1) 92%);
+            background: E8F3F1;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-info {
+            flex-grow: 1;
+        }
+
+        .user-name {
+            margin: 0;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navigation li {
+            margin-right: 20px;
+        }
+
+        .navigation li:last-child {
+            margin-right: 0;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navigation a.active {
+            text-decoration: underline;
         }
 
         .container {
@@ -40,6 +82,10 @@ $nombre_lugar = $_GET['nombre_lugar'];
         h1,
         h2 {
             color: #333;
+        }
+
+        .user-name {
+            color: #fff;
         }
 
         img {
@@ -65,6 +111,16 @@ $nombre_lugar = $_GET['nombre_lugar'];
 </head>
 
 <body>
+    <div class="header">
+        <div class="user-info">
+            <h1 class="user-name">¡Bienvenido!</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="new.php" class="active">Recomendaciones</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="container">
         <div class="info">
             <?php

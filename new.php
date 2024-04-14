@@ -15,7 +15,7 @@ require 'php/conexion.php';
 <body>
     <div class="header">
         <div class="user-info">
-            <h1 class="user-name">¡Bienvenido, [Nombre del Usuario]!</h1>
+            <h1 class="user-name">¡Bienvenido!</h1>
         </div>
         <nav class="navigation">
             <ul>
