@@ -99,3 +99,16 @@ CREATE TABLE Destinos
 ALTER TABLE Destinos ADD CONSTRAINT ID_Usuario_FK FOREIGN KEY(ID_Usuario_FK) REFERENCES Usuarios(ID_Usuario);
 ALTER TABLE Destinos ADD CONSTRAINT ID_Lugar_FK FOREIGN KEY(ID_Lugar_FK) REFERENCES Lugares(ID_Lugar);
 ALTER TABLE Destinos ADD CONSTRAINT ID_Test_FK FOREIGN KEY(ID_Test_FK) REFERENCES Tests(ID_Test);
+
+CREATE TABLE Comentarios
+(
+	ID_Comentario INT NOT NULL AUTO_INCREMENT,
+    ID_Lugar_FK INT NOT NULL,
+    Comentario VARCHAR(1000) NOT NULL,
+    CONSTRAINT Comentarios PRIMARY KEY
+    (
+		ID_Comentario
+    )
+);
+
+ALTER TABLE Comentarios ADD CONSTRAINT ID_Lugar_Comentario_FK FOREIGN KEY(ID_Lugar_FK) REFERENCES Lugares(ID_Lugar);
