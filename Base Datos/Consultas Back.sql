@@ -1,6 +1,7 @@
 USE HackMexico;
 
 -- Comandos para Back
+
 INSERT INTO Logins (UserName, Contrasena)
 VALUES ('$UserName', '$Contrasena');
 

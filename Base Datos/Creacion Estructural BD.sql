@@ -4,7 +4,7 @@ USE HackMexico;
 
 CREATE TABLE Logins 
 (
-	UserName VARCHAR(30) NOT NULL, 
+	  UserName VARCHAR(30) NOT NULL,
     Contrasena VARCHAR(50) NOT NULL,
     CONSTRAINT Logins PRIMARY KEY
     (

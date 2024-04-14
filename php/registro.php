@@ -1,26 +1,16 @@
 <?php
 include 'conexion.php';  //incluye el archivo de conexion
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$usario = $_POST['usuario'];
+
+$UserName= $_POST['UserName'];
 $contrasena = $_POST['contrasena'];
 
 
-$query = "INSERT INTO usuariosSI(nombre,correo,usuario,contrasena) 
-    VALUES('$nombre','$correo','$usario','$contrasena')";
-    //Verificar que el correo no se repita
-    $verificar_correo = mysqli_query($conexion,"SELECT * FROM usuariosSI WHERE correo='$correo'");
-    if(mysqli_num_rows($verificar_correo) > 0){
-        echo '
-        <script>   
-        alert("Este correo ya esta registrado, intenta con otro diferente");
-        window.location = "../index.php";
-        </script>           
-        ';
-        exit();
-    }
+$query = "INSERT INTO Logins(UserName,contrasena) 
+    VALUES('$UserName','$contrasena')";
+   
+  
     //Verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM usuariosSI WHERE usuario='$usario'");  
+    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE UserName='$UserName'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
         echo '
         <script>   
@@ -38,6 +28,7 @@ if($ejecutar){
     echo '
     <script>   
     alert("Usuario almacenado exitosamente");
+    window.location = "complet.html";
     </script>
     ';
 }
