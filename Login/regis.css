@@ -1,0 +1,77 @@
+/* General Styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    display: flex; /* Make the main content area flexible */
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    min-height: 100vh; /* Set minimum height for viewport */
+  }
+  
+  /* Form Container Styles */
+  
+  .contenedor__formulario {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 30px;
+    border-radius: 5px;
+    width: 80%; /* Set a width for the form */
+    max-width: 800px; /* Limit width for larger screens */
+  }
+  
+  /* Form Styles */
+  
+  .formulario__register {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow form elements to wrap */
+    justify-content: space-between; /* Distribute elements evenly */
+  }
+  
+  .grupo {
+    display: flex; /* Make each group a flex container */
+    align-items: center; /* Align inputs vertically */
+  }
+  
+  .grupo label {
+    display: inline-block; /* Make labels fit within their space */
+    width: 25%; /* Set label width (adjust as needed) */
+    margin-right: 10px; /* Add space between label and input */
+  }
+  
+  .grupo input[type="text"],
+  .grupo input[type="number"],
+  .grupo input[type="email"],
+  .grupo input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1; /* Allow inputs to expand */
+  }
+  
+  .grupo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1; /* Allow select to expand */
+  }
+  
+  /* Button Styles */
+  
+  .grupo button[type="submit"] {
+    width: auto; /* Remove fixed width */
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .grupo button[type="submit"]:hover {
+    background-color: #45A049; /* Darker green on hover */
+  }
+  

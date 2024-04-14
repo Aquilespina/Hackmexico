@@ -1,0 +1,106 @@
+/* Estilos CSS */
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del contenedor principal */
+.contenedor__todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos de la caja trasera */
+.caja__trasera {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario de inicio de sesión */
+.formulario__login {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+/* Estilos del formulario de registro */
+.formulario__register {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+/* Estilos para los títulos de los formularios */
+.formulario__login h2,
+.formulario__register h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para los campos de los formularios */
+.formulario__login input,
+.formulario__register input {
+    width: calc(100% - 40px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para los botones de los formularios */
+.formulario__login button,
+.formulario__register button {
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de registro */
+a , .caja_trasera_register button {
+    background-color: #28a745;
+}
+
+/* Estilos para los botones de alternar entre inicio de sesión y registro */
+.caja_trasera button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para el contenedor de los formularios de inicio de sesión y registro */
+.contenedor_login--register {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para los botones de alternar entre inicio de sesión y registro */
+.caja_trasera button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
