@@ -40,7 +40,7 @@ require 'php/conexion.php';
                 Colonia,' ',
                 Municipio,' ',
                 Codigo_Postal,' ',
-                Estado) as Direccion FROM Lugares";
+                Estado) as Direccion FROM Lugares where Silla_Ruedas = 'No'";
             $result = mysqli_query($conn, $sql);
             $imageName;
 
