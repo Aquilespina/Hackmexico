@@ -1,8 +1,11 @@
 USE HackMexico;
 
 -- Comandos para Back
-INSERT INTO Usuarios(Primer_Nombre, Segundo_Nombre, Primer_Apellido, Segundo_Apellido, Numero_Telefono, Correo_Electronico, Fecha_Nacimiento, Calle, Numero_Interno, Numero_Externo, Colonia, Codigo_Postal, Estado)
-VALUES('$Primer_Nombre', '$Segundo_Nombre', '$Primer_Apellido', '$Segundo_Apellido', '$Numero_Telefono', '$Correo_Electronico', '$Fecha_Nacimiento', '$Calle', '$Numero_Interno', '$Numero_Externo', '$Colonia', '$Codigo_Postal', '$Estado');
+INSERT INTO Logins (UserName, Contrasena)
+VALUES ('$UserName', '$Contrasena');
+
+INSERT INTO Usuarios(UserName, Primer_Nombre, Segundo_Nombre, Primer_Apellido, Segundo_Apellido, Numero_Telefono, Correo_Electronico, Fecha_Nacimiento, Calle, Numero_Interno, Numero_Externo, Colonia, Codigo_Postal, Estado)
+VALUES('$UserName', '$Primer_Nombre', '$Segundo_Nombre', '$Primer_Apellido', '$Segundo_Apellido', '$Numero_Telefono', '$Correo_Electronico', '$Fecha_Nacimiento', '$Calle', '$Numero_Interno', '$Numero_Externo', '$Colonia', '$Codigo_Postal', '$Estado');
 
 INSERT INTO Tests (ID_Usuario_PK, Es_Familiar, Actividad, Restrinccion_Alimentario, Silla_Ruedas, Visual, Auditiva)
 VALUES('$ID_Usuario_PK', '$Es_Familiar', '$Actividad', '$Restrinccion_Alimentario', '$Silla_Ruedas', '$Visual', '$Auditiva');
