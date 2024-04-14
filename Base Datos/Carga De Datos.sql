@@ -34,6 +34,18 @@ INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Ed
 VALUES ('Naturaleza', 'Exploración y disfrute de entornos naturales, como bosques, montañas, ríos y reservas naturales, con el objetivo de apreciar la biodiversidad, realizar actividades al aire libre y promover la conservación del medio ambiente.', 50, 'De 1 hora a 5 horas.', 2);
 
 INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
+VALUES ('Deportes', 'Participación en actividades físicas y competitivas que implican habilidades específicas, ejercicio y competición, con el fin de mantener la salud, el entretenimiento, la superación personal y el espíritu de equipo.', 220, 'De 2 horas a 2:30 horas.', 1);
+
+INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
+VALUES ('Mercado', 'Espacio físico o virtual donde se lleva a cabo la compra y venta de bienes y servicios entre compradores y vendedores, con el objetivo de intercambiar productos y generar beneficios económicos para ambas partes.', 3000, 'De 30 min a 1 hora.', 2);
+
+INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
+VALUES ('Bares', 'Servicio de bebidas y comidas ligeras en un ambiente social, ofreciendo opciones de entretenimiento como música en vivo, juegos y eventos temáticos para el disfrute de los clientes.', 5000, 'De 1 hora a 4 horas.', 18);
+
+INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
+VALUES ('Aprendizaje', 'Proceso mediante el cual adquirimos conocimientos, habilidades y comprensión a través de la experiencia, la instrucción y la práctica, lo que nos permite desarrollarnos y adaptarnos a nuevas situaciones y desafíos.', 0, 'De 1 hora a 8 horas.', 1);
+
+INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
 VALUES ('', '', , '', );
 
 
@@ -80,15 +92,55 @@ INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre
 VALUES ('Castillo de Chapultepec', 'Un castillo que fue construido en el siglo XIX y que ahora alberga un museo.', '09:00', '17:00', 'MArtes a Domingo', 'Bosque de Chapultepec', 0, 'Chapultepec', 'Miguel Hidalgo', 11100, 'Ciudad de México', 'Museo', 'Sí', 'Tienda de regalos, cafetería, estacionamiento', 'Sí', 'Sí');
 
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
-INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
-INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
-VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
+VALUES ('Frida Kahlo Museum', 'La casa donde vivió y pintó la artista mexicana Frida Kahlo.', '10:00', '18:00', 'Martes a domingo', 'Londres', 247, 'Colonia del Carmen', 'Coyoacán', 04100, 'Ciudad de México', 'Museo', 'Sí', 'Tienda de regalos, cafetería, estacionamiento', 'Sí', 'Sí');
 
-15,Frida Kahlo Museum (Casa Azul),La casa donde vivió y pintó la artista mexicana Frida Kahlo.,10:00 a 18:00 hrs.,Martes a domingo,Londres 247,Colonia del Carmen,Coyoacán,04100,Ciudad de México,Museo,Sí,Tienda de regalos, cafetería, estacionamiento,Sí,Sí
-16,Parque La Mexicana,Un parque urbano que ofrece una gran variedad de actividades al aire libre.,6:00 a 20:00 hrs.,Todos los días,Av. Santa Fe 500,Colonia Santa Fe,Santa Fe,01219,Ciudad de México,Parque,Sí,Áreas verdes, juegos infantiles, canchas deportivas,Sí,Sí
-17,Estadio Azteca,Un estadio de fútbol que es el más grande de América Latina.,10:00 a 18:00 hrs.,Lunes a viernes,Calzada de Tlalpan s/n,Colonia Churubusco,Coyoacán,04210,Ciudad de México,Estadio,Sí,Tienda de regalos, restaurante, estacionamiento,Sí,No
-18,Mercado de Artesanías La Ciudadela,Un mercado donde puedes encontrar artesanías de todo México.,10:00 a 19:00 hrs.,Todos los días,Av. Balderas s/n,Colonia Centro,Cuauhtémoc,06040,Ciudad de México,Mercado,Sí,Tiendas de artesanías, restaurantes, estacionamiento,Sí,Sí
-19,Bosque de Chapultepec,Un bosque urbano que es uno de los más grandes de América Latina.,6:00 a 18:00 hrs.,Todos los días,1ra Secc. del Bosque de Chapultepec,Sin número,Miguel Hidalgo,11100,Ciudad de México,Parque,Sí,Áreas verdes, juegos infantiles, museos,Sí,Sí
-20,Zona Rosa,Un barrio conocido por su vida nocturna y sus tiendas de moda.,10:00 a 22:00 hrs.,Todos los días,Zona Rosa,Ciudad de México,06600,Ciudad de México,Zona comercial,Sí,Tiendas, restaurantes, bares,Sí,No
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Parque La Mexicana', 'Un parque urbano que ofrece una gran variedad de actividades al aire libre.', '06:00', '20:00', 'Todos los días', 'Av. Santa Fe', 500, 'Santa Fe', 'Álvaro Obregón', 01219, 'Ciudad de México', 'Naturaleza', 'Sí', 'Áreas verdes, juegos infantiles, canchas deportivas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Estadio Azteca', 'Un estadio de fútbol que es el más grande de América Latina.', '10:00', '18:00', 'Lunes a viernes', 'Calzada de Tlalpan', 0, 'Churubusco', 'Coyoacán', 04210, 'Ciudad de México', 'Deportes', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'Sí', 'No');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('La Ciudadela', 'Un mercado donde puedes encontrar artesanías de todo México.', '10:00', '19:00', 'Todos los días', 'Av. Balderas', 0, 'Centro', 'Cuauhtémoc', 06040, 'Ciudad de México', 'Mercado', 'Sí', 'Tiendas de artesanías, restaurantes, estacionamiento', 'No', 'No');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Bosque de Chapultepec', 'Un bosque urbano que es uno de los más grandes de América Latina.', '06:00', '18:00', 'Todos los días', 'Bosque de Chapultepec', 0, 'Chapultepec', 'Miguel Hidalgo', 11100, 'Ciudad de México', 'Naturaleza', 'Sí', 'Áreas verdes, juegos infantiles, museos', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Zona Rosa', 'Un barrio conocido por su vida nocturna y sus tiendas de moda.', '10:00', '22:00', 'Todos los días.', 'Zona Rosa', 0, 'Zona Rosa', 'Cuauhtémoc', 06600, 'Ciudad de México', 'Bares', 'Sí', 'Tiendas, restaurantes, bares', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Palacio Nacional', 'Un palacio que fue la residencia oficial de los presidentes de México hasta 1964.', '09:00', '17:00', 'Martes a domingo', 'Plaza de la Constitución', 1, 'Centro Histórico', 'Cuauhtémoc', 06066, 'Ciudad de México', 'Museo', 'Sí', 'Tienda de regalos, cafetería, visitas guiadas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Museo Soumaya', 'Un museo que alberga una colección de arte mexicano e internacional.', '10:30', '20:30', 'Miércoles a domingo', 'Paseo de la Reforma', 555, 'Polanco', 'Miguel Hidalgo', 11570, 'Ciudad de México', 'Museo', 'Sí', 'Tienda de regalos, cafetería, estacionamiento', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Bosque de Aragón', 'Un bosque urbano que ofrece una gran variedad de actividades al aire libre.', '06:00', '18:00', 'Todos los días', 'Av. Eduardo Molina', 0, 'Bosque de Aragón', 'Gustavo A. Madero', 05514, 'Ciudad de México', 'Naturaleza', 'Sí', 'Áreas verdes, juegos infantiles, lago', 'No', 'No');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Conjunto Urbano', 'Un conjunto urbano que alberga una gran variedad de restaurantes y bares.', '10:00', '12:00', 'Todos los días', 'Av. Principal', 45, 'Nápoles', 'Benito Juárez', 03810, 'Ciudad de México', 'Bares', 'Sí', 'Tiendas, restaurantes, bares', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('(UNAM)', 'Una de las universidades más importantes de América Latina.', '07:00', '23:00', 'Todos los días', 'Ciudad Universitaria', 0, 'Ciudad Universitaria', 'Coyoacán', 04510, 'Ciudad De México', 'Aprendizaje', 'Sí', 'Tiendas, restaurantes, bibliotecas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Xcaret', 'Un parque ecológico que ofrece una gran variedad de actividades culturales y naturales.', '08:00', '22:00', 'Todos los días', 'Carretera Federal Chetumal', 282, 'Playa del Carmen', 'Puerto Juárez', 77710, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, espectáculos', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Chichén Itzá', 'Una antigua ciudad maya que es Patrimonio de la Humanidad por la UNESCO.', '08:00', '17:00', 'Todos los días', 'Mérida', 0, 'Mérida', 'Yucatán', 98800, 'Yucatán', 'Arqueológia', 'No', 'Tienda de regalos, restaurante, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Tulum', 'Una antigua ciudad maya que se encuentra en la Riviera Maya.', '08:00', '17:00', 'Todos los días', 'Tulum', 0, 'Tulum', 'Quintana Roo', 77760, 'Quintana Roo', 'Arqueológia', 'No', 'Tienda de regalos, restaurante, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Isla Mujeres', 'Una isla que se encuentra frente a las costas de Cancún.', '07:00', '22:00', 'Todos los días', 'Isla Mujeres', 0, 'Isla Mujeres', 'Isla Mujeres', 77400, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, playas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Playa Cancún', 'Una ciudad turística que es conocida por sus playas de arena blanca y sus aguas cristalinas.', '08:00', '22:00', 'Todos los días', 'Av. Principal', 0, 'Cancún', 'Benito Juárez', 77500, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
+select * from Lugares;
