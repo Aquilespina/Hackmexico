@@ -1,7 +1,7 @@
 <?php
 $nombreUsuario = "Nombre del Usuario"; // Aquí debes obtener el nombre del usuario desde donde sea que lo estés almacenando
 ?>
-
+   <link rel="stylesheet" href="styles.css">
 <h1 class="welcome-message">¡Bienvenido, <?php echo $nombreUsuario; ?>!</h1>
 <p class="intro-message">¡Gracias por utilizar nuestro servicio de sugerencias! Aquí tienes algunas opciones de lugares destino para explorar:</p>
 <ul class="suggestions-list">
