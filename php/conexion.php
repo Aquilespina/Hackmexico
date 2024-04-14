@@ -1,16 +1,19 @@
 <?php
-
-
 $server = 'localhost';
-    $user = 'root';
-    $pass = 'Aquiles07';
-    $db = 'login_register_bd';
-    $conexion = mysqli_connect($server, $user, $pass, $db);
+$user = 'root';
+$pass = 'aquiles07';
+$db = 'HackMexico';
 
-//
-//if($conexion){
- //   echo 'Conectado exitosamente a la base de datos';   
-//}else{  
-  //  echo 'No se pudo conectar a la base de datos';    
-//}  
+$conexion = mysqli_connect($server, $user, $pass, $db);
+
+if ($conexion) {
+    echo 'Conectado exitosamente a la base de datos';
+
+    // Código para consultas y manipulación de datos
+
+} else {
+    echo 'No se pudo conectar a la base de datos: ' . mysqli_connect_error();
+}
+
+mysqli_close($conexion);
 ?>
