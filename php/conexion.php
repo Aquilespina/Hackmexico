@@ -2,11 +2,8 @@
 
 $server = 'localhost';
 $user = 'root';
-
 $pass = 'admin';
-
 $db = 'HackMexico';
-
 $conn = mysqli_connect($server, $user, $pass, $db);
 
 
