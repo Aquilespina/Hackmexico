@@ -7,8 +7,6 @@ $contrasena = $_POST['contrasena'];
 
 $query = "INSERT INTO Logins(UserName,contrasena) 
     VALUES('$UserName','$contrasena')";
-   
-  
     //Verificar que el usuario no se repita 
     $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE UserName='$UserName'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
