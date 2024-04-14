@@ -1,16 +1,16 @@
 <?php
 include 'conexion.php';  //incluye el archivo de conexion
 
-$username= $_POST['username'];
+$UserName= $_POST['UserName'];
 $contrasena = $_POST['contrasena'];
 
 
-$query = "INSERT INTO Logins(usuario,contrasena) 
-    VALUES('$username','$contrasena')";
+$query = "INSERT INTO Logins(UserName,contrasena) 
+    VALUES('$UserName','$contrasena')";
    
   
     //Verificar que el usuario no se repita 
-    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE username='$username'");  
+    $verificar_usuario = mysqli_query($conexion,"SELECT * FROM Logins WHERE UserName='$UserName'");  
     if(mysqli_num_rows($verificar_usuario) > 0){
         echo '
         <script>   
