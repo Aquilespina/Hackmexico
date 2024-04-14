@@ -46,6 +46,9 @@ INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Ed
 VALUES ('Aprendizaje', 'Proceso mediante el cual adquirimos conocimientos, habilidades y comprensión a través de la experiencia, la instrucción y la práctica, lo que nos permite desarrollarnos y adaptarnos a nuevas situaciones y desafíos.', 0, 'De 1 hora a 8 horas.', 1);
 
 INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
+VALUES ('Turismo', 'Exploración y disfrute de destinos turísticos, culturales, naturales o históricos, con el propósito de conocer nuevas culturas, experiencias y lugares, así como relajarse y recrearse fuera del entorno habitual.', 20000, 'De 1 hora a 7 días.', 4);
+
+INSERT INTO Tipo_Actividades (Nombre_Actividad, Descripcion, Costo,	Duracion, Edad_Minima)
 VALUES ('', '', , '', );
 
 
@@ -140,7 +143,56 @@ INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre
 VALUES ('Playa Cancún', 'Una ciudad turística que es conocida por sus playas de arena blanca y sus aguas cristalinas.', '08:00', '22:00', 'Todos los días', 'Av. Principal', 0, 'Cancún', 'Benito Juárez', 77500, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
 
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Xel-Há', 'Un parque natural que ofrece una gran variedad de actividades acuáticas.', '08:00', '18:00', 'Todos los días', 'Carretera Federal Chetumal', 160, 'Playa del Carmen', 'Quintana Roo', 77710, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Cobá', 'Una antigua ciudad maya que se encuentra en la selva de Quintana Roo.', '08:00', '17:00', 'Todos los días', 'Cobá', 0, 'Cobá', 'Quintana Roo', 77760, 'Quintana Roo', 'Arqueológia', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'Sí', 'Sí');
+
+INSERT INTO Lugares (ID_Lugar, Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES (34, 'Isla Holbox', 'Una isla que se encuentra frente a las costas de Cancún y que es conocida por sus playas vírgenes.', '07:00', '22:00', 'Todos los días', 'Isla Holbox', 0, 'Isla Holbox', 'Quintana Roo', 77600, 'Quintana Roo', 'Naturaleza', 'No', 'Tiendas, restaurantes, playas', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Tulum', 'Un pueblo mágico que se encuentra en la Riviera Maya y que es conocido por sus ruinas mayas y sus playas.', '08:00', '22:00', 'Todos los días', 'Tulum', 0, 'Tulum', 'Quintana Roo', 77760, 'Quintana Roo', 'Arqueológia', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Playa del Carmen', 'Una ciudad turística que se encuentra en la Riviera Maya y que es conocida por sus playas de arena blanca y sus aguas cristalinas.', '08:00', '22:00', 'Todos los días', 'Av. Principanl', 0, 'Playa del Carmen', 'Solidaridad', 77710, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Cozumel', 'Una isla que se encuentra frente a las costas de Playa del Carmen y que es conocida por sus arrecifes de coral.', '08:00', '22:00', 'Todos los días', 'Av. Principal', 0, 'San Miguel', 'Cozumel', 77600, 'Quintana Roo', 'Naturaleza', 'Sí', 'iendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Valladolid', 'Una ciudad colonial que se encuentra en el estado de Yucatán.', '08:00', '22:00', 'Todos los días.', 'Av. Principal', 0, 'Valladolid', 'Yucatán', 98500, 'Yucatán', 'Turismo', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Izamal', 'Una ciudad colonial que se encuentra en el estado de Yucatán y que es conocida como la "Ciudad Amarilla"', '08:00', '22:00', 'Todos los días.', 'Av. Principal', 0, 'Izamal', 'Yucatán', 98500, 'Yucatán', 'Turismo', 'Sí', 'Tiendas, Hoteles, Plazas', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Merida', 'La capital del estado de Yucatán y una de las ciudades más antiguas de México.', '08:00', '22:00', 'Todos los días.', 'Av. Principal', 0, 'Mérida', 'Yucatán', 97000, 'Yucatán', 'Turismo', 'Sí', 'Tiendas, restaurantes, hoteles', 'Sí', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Cenote Ik Kil', 'Un cenote natural de aguas cristalinas donde se puede nadar y bucear.', '08:00', '17:00', 'Todos los días', 'Carretera Yucatán-Chichen Itzá', 182, 'Tinum', 'Yucatán', 98800, 'Yucatán', 'Naturaleza', 'Sí', 'Tienda de regalos, restaurante, estacionamiento', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Reserva Biosfera Sian Ka an', 'Una reserva de la biosfera que alberga una gran variedad de flora y fauna.', '08:00', '17:00', 'Todos los días', 'Sian Ka an', 0, 'Tulum', 'Quintana Roo', 77760, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tienda de regalos, restaurante, paseos en lancha', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Laguna Bacalar', 'Una laguna de aguas cristalinas que se encuentra en el estado de Quintana Roo.', '08:00', '18:00', 'Todos los días', 'Chetumal', 0, 'Chetumal', 'Othón P. Blanco', 77750, 'Quintana Roo', 'Naturaleza', 'No', 'LAguna', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Mahahual', 'Un pueblo pesquero que se encuentra en la costa del Caribe y que es conocido por sus playas de arena blanca.', '08:00', '22:00', 'Todos los días', 'Mahahual', 0, 'Mahahual', 'Othón P. Blanco', 77750, 'Quintana Roo', 'Naturaleza', 'Sí', 'Tiendas, restaurantes, hoteles', 'No', 'Sí');
+
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
+VALUES ('Palacio de Gobierno ', 'Un palacio que alberga las oficinas del gobernador del estado de Yucatán.', '08:00', '15:00', 'Lunes a viernes', 'Plaza Grande ', 0, 
+'', '', , '', '', '', '', '', '');
+INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
 VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
 INSERT INTO Lugares (Nombre_Lugar,	Descripcion,	Horario_Apertura,	Horario_Cierre,	Dias_Abiertos,	Calle, Numero_Exterior,	Colonia,	Municipio,	Codigo_Postal,	Estado,	Tipo_Actividad_FK,	Silla_Ruedas,	Servicios_Disponibles,	Visual,	Auditiva)
 VALUES ('', '', '', '', '', '', , '', '', , '', '', '', '', '', '');
 select * from Lugares;
+Colonia Centro,Mérida,97000,Yucatán,Monumento histórico,Sí,Tienda de regalos, visitas guiadas,Sí,Sí
+45,Teatro Peón Contreras,Un teatro que es uno de los más importantes de México.,10:00 a 18:00 hrs.,Martes a domingo,Calle 60 No. 52-A,Colonia Centro,Mérida,97000,Yucatán,Teatro,Sí,Tienda de regalos, cafetería, visitas guiadas,Sí,Sí
+46,Museo Regional de Antropología de Yucatán,Un museo que alberga una colección de artefactos de la cultura maya.,8:00 a 17:00 hrs.,Martes a domingo,Calle 60 No. 52-A,Colonia Centro,Mérida,97000,Yucatán,Museo,Sí,Tienda de regalos, cafetería, visitas guiadas,Sí,Sí
+47,Mercado Lucas de Gálvez,Un mercado que ofrece una gran variedad de productos locales.,8:00 a 20:00 hrs.,Todos los días,Calle 57 No. 505,Colonia Centro,Mérida,97000,Yucatán,Mercado,Sí,Tiendas de artesanías, restaurantes, estacionamiento,Sí,Sí
+48,Paseo de Montejo,Un paseo que es uno de los más emblemáticos de la ciudad de Mérida.,6:00 a 22:00 hrs.,Todos los días,Paseo de Montejo,Mérida,97000,Yucatán,Paseo,Sí,Áreas verdes, monumentos, restaurantes,Sí,Sí
+49,Cenote Suytun,Un cenote natural de aguas cristalinas donde se puede nadar y bucear.,8:00 a 17:00 hrs.,Todos los días,Valladolid,Valladolid,98500,Yucatán,Cenote,Sí,Tienda de regalos, restaurante, estacionamiento,Sí,No
+50,Uxmal,Una antigua ciudad maya que es Patrimonio de la Humanidad por la UNESCO.,8:00 a 17:00 hrs.,Todos los días,Uxmal,Uxmal,97870,Yucatán,Zona arqueológica,Sí,Tienda de regalos, restaurante, estacionamiento,Sí,Sí
