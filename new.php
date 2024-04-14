@@ -49,14 +49,14 @@ require 'php/conexion.php';
                 if (mysqli_num_rows($result) > 0) {
                     // Print each row
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $imageName = "img/".$row['Nombre_Lugar'].".". "jpg";
+                        $imageName = "img/" . $row['Nombre_Lugar'] . "." . "jpg";
                         echo "<li>";
                         echo "<img src=\"{$imageName}\" alt=\"{$row['Nombre_Lugar']}\">";
                         echo "    <div class=\"suggestion-info\">";
                         echo "        <h2>{$row['Nombre_Lugar']}</h2>";
                         echo "        <p>{$row['Descripcion']}</p>";
                         echo "        <p class=\"location\">{$row['Direccion']}</p>";
-                        echo "        <p class=\"details\"><a href='details.php'>Ver detalles</a></p>";
+                        echo "        <p class=\"details\"><a href='details.php?nombre_lugar={$row['Nombre_Lugar']}'>Ver detalles</a></p>";
                         echo "    </div>";
                         echo "</li>";
                     }

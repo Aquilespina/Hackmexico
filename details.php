@@ -1,5 +1,6 @@
 <?php
-require 'conexion.php';
+require 'php/conexion.php';
+$nombre_lugar = $_GET['nombre_lugar'];
 ?>
 
 <!DOCTYPE html>
@@ -66,16 +67,30 @@ require 'conexion.php';
 <body>
     <div class="container">
         <div class="info">
-            <h1>Nombre del Lugar</h1>
-            <img src="https://insolitours.travel/wp-content/uploads/2021/07/castillo_de_chapultepec.jpg"
-                alt="Imagen del lugar">
-            <p>Descripción detallada del lugar.</p>
-            <p><strong>Horario de Apertura:</strong> 09:00</p>
-            <p><strong>Horario de Cierre:</strong> 18:00</p>
-            <p><strong>Días que Abre:</strong> Lunes a Viernes</p>
-            <p><strong>Dirección:</strong> Dirección del lugar</p>
-            <p><strong>Tipo de Actividad:</strong> Tipo de actividad que se realiza</p>
-            <p><strong>Servicios Disponibles:</strong> Servicios disponibles en el lugar</p>
+            <?php
+            
+            $nombre_lugar = mysqli_real_escape_string($conn, $nombre_lugar); // Escapar el valor de $nombre_lugar
+
+            $sql = "SELECT Nombre_Lugar, Descripcion, CONCAT(Calle, ' ', Numero_Exterior, ' ', Colonia, ' ', Municipio, ' ', Codigo_Postal, ' ', Estado) as Direccion, Horario_Apertura, Horario_Cierre, Dias_Abiertos, Tipo_Actividad_FK, Servicios_Disponibles, Silla_Ruedas, Visual, Auditiva FROM Lugares WHERE Nombre_Lugar='{$nombre_lugar}'";
+            
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            $imageName = "img/" . $row['Nombre_Lugar'] . "." . "jpg";
+
+            echo "<h1>{$row['Nombre_Lugar']}</h1>";
+            echo "<img src=\"{$imageName}\" alt=\"{$row['Nombre_Lugar']}\">";
+            echo "<p>{$row['Descripcion']}</p>";
+            echo "<p><strong>Horario de Apertura: </strong> {$row['Horario_Apertura']}</p>";
+            echo "<p><strong>Horario de Cierre: </strong> {$row['Horario_Cierre']}</p>";
+            echo "<p><strong>Días que Abre: </strong> {$row['Dias_Abiertos']}</p>";
+            echo "<p><strong>Dirección: </strong> {$row['Direccion']}</p>";
+            echo "<p><strong>Tipo de Actividad: </strong> {$row['Tipo_Actividad_FK']}</p>";
+            echo "<p><strong>Servicios Disponibles: </strong> {$row['Servicios_Disponibles']}</p>";
+            echo "<p><strong>Apto para silla de ruedas: </strong> {$row['Silla_Ruedas']}</p>";
+            echo "<p><strong>Apto para personas con dicapacidad visual: </strong> {$row['Visual']}</p>";
+            echo "<p><strong>Apto para personas con dicapacidad auditiva: </strong> {$row['Auditiva']}</p>";
+            ?>
+
         </div>
         <div class="reviews">
             <h2>Reseñas</h2>
