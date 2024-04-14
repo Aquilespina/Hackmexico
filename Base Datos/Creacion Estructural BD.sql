@@ -1,12 +1,21 @@
 CREATE SCHEMA `HackMexico`;
 
-DROP SCHEMA `hackmexico` ;
-
 USE HackMexico;
+
+CREATE TABLE Logins 
+(
+	UserName VARCHAR(30) NOT NULL,
+    Contrasena VARCHAR(50) NOT NULL,
+    CONSTRAINT Logins PRIMARY KEY
+    (
+		UserName
+    )
+);
 
 CREATE TABLE Usuarios
 (
 	ID_Usuario INT NOT NULL AUTO_INCREMENT,
+    UserName_FK VARCHAR(30) NOT NULL,
     Primer_Nombre VARCHAR(30) NOT NULL,
     Segundo_Nombre VARCHAR(30) NULL,
     Primer_Apellido VARCHAR(30) NOT NULL,
@@ -25,6 +34,8 @@ CREATE TABLE Usuarios
 		ID_Usuario
     )
 );
+
+ALTER TABLE Usuarios ADD CONSTRAINT UserName_FK FOREIGN KEY (UserName_FK) REFERENCES Logins(UserName);
 
 CREATE TABLE Tests
 (
