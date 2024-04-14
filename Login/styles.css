@@ -1,104 +1,106 @@
+/* Estilos CSS */
+
 /* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+/* Estilos del contenedor principal */
+.contenedor__todo {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f1f1f1;
 }
 
-main {
+/* Estilos de la caja trasera */
+.caja__trasera {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 20px;
 }
 
-.contenedor__todo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 400px;
-    width: 100%;
-}
-
-/* Estilos del formulario */
-form {
-    background: #fff;
-    padding: 40px;
+/* Estilos del formulario de inicio de sesión */
+.formulario__login {
+    background-color: #f2f2f2;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
 }
 
-h2 {
+/* Estilos del formulario de registro */
+.formulario__register {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+/* Estilos para los títulos de los formularios */
+.formulario__login h2,
+.formulario__register h2 {
     margin-bottom: 20px;
-    color: #333;
+    text-align: center;
 }
 
-input[type="text"],
-input[type="password"],
-button {
-    width: 100%;
+/* Estilos para los campos de los formularios */
+.formulario__login input,
+.formulario__register input {
+    width: calc(100% - 40px);
+    margin-bottom: 10px;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
+/* Estilos para los botones de los formularios */
+.formulario__login button,
+.formulario__register button {
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    padding: 10px;
     border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Estilos del contenedor trasero */
-.caja__trasera {
-    position: relative;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-
-.caja__trasera h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.caja__trasera p {
-    color: #666;
-    font-size: 14px;
-    text-align: center;
-}
-
-#btn__iniciar--sesion,
-#btn__registrarse {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #4CAF50;
-    border: 1px solid #4CAF50;
     border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
 }
 
-#btn__iniciar--sesion:hover,
-#btn__registrarse:hover {
-    background-color: #4CAF50;
-    color: white;
+/* Estilos para el botón de registro */
+a , .caja_trasera_register button {
+    background-color: #28a745;
 }
+
+/* Estilos para los botones de alternar entre inicio de sesión y registro */
+.caja_trasera button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para el contenedor de los formularios de inicio de sesión y registro */
+.contenedor_login--register {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para los botones de alternar entre inicio de sesión y registro */
+.caja_trasera button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+

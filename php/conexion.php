@@ -2,10 +2,13 @@
 
 $server = 'localhost';
 $user = 'root';
+
 $pass = 'admin';
+
 $db = 'HackMexico';
 
 $conn = mysqli_connect($server, $user, $pass, $db);
+
 
 // Check connection
 if (!$conn) {
@@ -14,5 +17,6 @@ if (!$conn) {
 
 // Close connection
 // mysqli_close($conn);
+
 
 

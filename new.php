@@ -12,6 +12,8 @@ require 'php/conexion.php';
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
+<link rel="stylesheet" href="styles.css">
 <body>
     <div class="header">
         <div class="user-info">
