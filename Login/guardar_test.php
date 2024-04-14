@@ -19,7 +19,11 @@ $sql = "INSERT INTO Tests (ID_Usuario_FK, Es_Familiar, Actividad, Restrinccion_A
 if ($conn->query($sql) === TRUE) {
     // Datos insertados correctamente, redirigir a alguna página de éxito o mostrar un mensaje
     echo "<script>alert('Test registrado correctamente');</script>";
+<<<<<<< HEAD
     echo "<script>window.location.replace('destinos.html');</script>";
+=======
+    echo "<script>window.location.replace('resultados.html');</script>";
+>>>>>>> 922e23279ef533b9e1e87b2a3ef9b2d7907947ac
 } else {
     // Error al insertar datos, redirigir a una página de error o mostrar un mensaje
     echo "<script>alert('Error al registrar el Test');</script>";
